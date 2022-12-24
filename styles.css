@@ -1,0 +1,18 @@
+#main > div {
+    width: 10px;
+    height: 10px;
+    background-color: black;
+    margin: 10px;
+    border: none;
+    margin: 0;
+    padding: 0;
+    gap: 0;
+}
+#main {
+    display: grid;
+    grid-template-columns: repeat(16, 0fr);
+    grid-gap: 0;
+}
+p {
+    display: inline;
+}
