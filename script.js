@@ -7,6 +7,7 @@ const div = document.createElement("div");
 main.appendChild(div);
 }
 let divs = document.querySelectorAll("#main > div");
+p.textContent = `${range.value} X ${range.value}`;
 var timer = setInterval(check, 100);
 divs.forEach((div) => {
     div.addEventListener("mouseover", () => {
@@ -18,7 +19,7 @@ function check() {
         while (main.lastElementChild) {
             main.removeChild(main.lastElementChild);
         }
-        for(let i = range.value; i < range.value ** 2; i++) {
+        for(let i = 0; i < range.value ** 2; i++) {
             const div = document.createElement("div");
             main.appendChild(div);
             }
@@ -28,8 +29,11 @@ function check() {
                 div.style.background = "blue"
                 })
             });
-            main.setAttribute("style", `grid-template-columns: repeat(${range.value}, 0fr);`)
+            main.setAttribute("style", `grid-template-columns: repeat(${range.value}, 0fr); grid-template-rows: repeat(${range.value}, 0fr);`)
+            p.textContent = `${range.value} X ${range.value}`;
             x = range.value;
+            /*for(let l = 0; l < divs.length; i++) {
+                divs[i].style.cssText = "width: 1em; height: 1em"
+            }*/
         }
-        p.textContent = `${range.value} X ${range.value}`;
 }
